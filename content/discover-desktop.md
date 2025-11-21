@@ -115,13 +115,7 @@ description: Comprehensive guide showcasing third-party article layout for SEO o
 
 ## Share this article
 
----
-
-+------------------------------------+
-| **Columns**                        |
-+------------------------------------+
-| [Facebook](#) [X](#) [LinkedIn](#) [Pinterest](#) [Email](#) [Link](#) |
-+------------------------------------+
+[Facebook](#) [X](#) [LinkedIn](#) [Pinterest](#) [Email](#) [Link](#)
 
 ---
 
