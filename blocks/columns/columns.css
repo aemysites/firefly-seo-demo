@@ -134,6 +134,16 @@
   margin-bottom: 4px;
 }
 
+/* Light gray background for numbered list section */
+.columns:has(ol) {
+  background-color: var(--color-adobe-gray-100);
+  padding: var(--spacing-adobe-xl) 0;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
@@ -144,5 +154,12 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns:has(ol) {
+    margin-left: -32px;
+    margin-right: -32px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }

@@ -304,6 +304,13 @@ main img {
   height: auto;
 }
 
+/* horizontal rules */
+hr {
+  margin: 24px 0;
+  border: 0;
+  border-top: 1px solid var(--color-adobe-gray-divider-400);
+}
+
 .icon {
   display: inline-block;
   height: 24px;
