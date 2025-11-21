@@ -1,0 +1,27 @@
+/* Columns Aside Component Tokens */
+
+.columns-aside {
+  /* Layout */
+  --columns-aside-min-height: 487px;
+  --columns-aside-gap: var(--spacing-adobe-s);
+  --columns-aside-padding: var(--spacing-adobe-xl) var(--spacing-adobe-m);
+
+  /* Colors */
+  --columns-aside-bg-color: var(--color-adobe-white);
+  --columns-aside-text-color: var(--color-adobe-text);
+  --columns-aside-heading-color: var(--color-adobe-text);
+
+  /* Typography */
+  --columns-aside-heading-size: var(--font-size-adobe-heading-m);
+  --columns-aside-heading-weight: var(--font-weight-adobe-bold);
+  --columns-aside-body-size: var(--font-size-adobe-body-s);
+  --columns-aside-body-weight: var(--font-weight-adobe-regular);
+
+  /* Image */
+  --columns-aside-image-max-width: 600px;
+  --columns-aside-image-object-fit: cover;
+
+  /* Spacing */
+  --columns-aside-content-gap: var(--spacing-adobe-s);
+  --columns-aside-heading-margin: 0 0 var(--spacing-adobe-xs) 0;
+}

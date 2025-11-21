@@ -20,8 +20,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'adobe-clean', roboto, roboto-fallback, sans-serif;
+  --heading-font-family: 'adobe-clean', roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -39,6 +39,70 @@
   /* nav height */
   --nav-height: 64px;
   --header-height: var(--nav-height);
+
+  /* ===== FIGMA DESIGN TOKENS ===== */
+
+  /* Adobe Colors */
+  --color-adobe-text: #2c2c2c;
+  --color-adobe-white: #ffffff;
+  --color-adobe-gray-100: #f8f8f8;
+  --color-adobe-gray-300: #d4d4d4;
+  --color-adobe-gray-divider-200: #eaeaea;
+  --color-adobe-gray-divider-400: #b6b6b6;
+  --color-adobe-footer-text: #4b4b4b;
+  --color-adobe-footer-subtext: #696969;
+  --color-adobe-breadcrumbs: #707070;
+
+  /* Brand Colors */
+  --color-adobe-blue: #4069fd;
+  --color-adobe-acrobat: #584ccc;
+  --color-adobe-green: #009c3b;
+
+  /* Adobe Typography */
+  --font-adobe-clean: 'adobe-clean', 'Adobe Clean', sans-serif;
+
+  /* Adobe Font Sizes */
+  --font-size-adobe-heading-xxl: 44px;
+  --font-size-adobe-heading-xl: 36px;
+  --font-size-adobe-heading-m: 24px;
+  --font-size-adobe-heading-s: 20px;
+  --font-size-adobe-heading-xs: 18px;
+  --font-size-adobe-body-xxl: 28px;
+  --font-size-adobe-body-xl: 22px;
+  --font-size-adobe-body-l: 20px;
+  --font-size-adobe-body-m: 18px;
+  --font-size-adobe-body-s: 16px;
+  --font-size-adobe-body-xxs: 12px;
+
+  /* Adobe Font Weights */
+  --font-weight-adobe-regular: 400;
+  --font-weight-adobe-semi-bold: 600;
+  --font-weight-adobe-bold: 700;
+
+  /* Adobe Spacing */
+  --spacing-adobe-xs: 16px;
+  --spacing-adobe-s: 24px;
+  --spacing-adobe-m: 32px;
+  --spacing-adobe-l: 40px;
+  --spacing-adobe-xl: 56px;
+  --spacing-adobe-xxl: 80px;
+
+  /* Adobe Layout */
+  --width-adobe-container: 1200px;
+  --width-adobe-page: 1920px;
+  --width-adobe-col-5: 500px;
+  --width-adobe-col-6: 600px;
+  --width-adobe-col-8: 800px;
+
+  /* Adobe Button Styles */
+  --color-button-adobe-accent: #4069fd;
+  --color-button-adobe-primary: #2c2c2c;
+  --font-size-button-l: 19px;
+  --font-size-button-m: 17px;
+  --font-size-button-s: 15px;
+  --line-height-button-l: 24px;
+  --line-height-button-m: 21px;
+  --line-height-button-s: 19px;
 }
 
 /* fallback fonts */
@@ -114,7 +178,10 @@ h6 {
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
+h2 {
+  font-size: var(--heading-font-size-xl);
+  text-align: center;
+}
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
@@ -145,6 +212,26 @@ pre {
 
 main > div {
   margin: 40px 16px;
+}
+
+/* Center align standalone headings (not in blocks) */
+main > div > h2,
+main > .section > h2,
+main div:not([class]) > h2 {
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure block headings are not affected */
+.columns h2,
+.hero-split h2,
+.columns-aside h2,
+.accordion h2 {
+  text-align: center;
 }
 
 input,

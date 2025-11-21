@@ -19,6 +19,121 @@
   display: block;
 }
 
+/* Typography */
+.columns h2 {
+  font-size: var(--font-size-adobe-heading-m);
+  font-weight: var(--font-weight-adobe-bold);
+  line-height: 1.25;
+  margin-bottom: var(--spacing-adobe-s);
+  color: var(--color-adobe-text);
+  text-align: center;
+}
+
+.columns p {
+  font-size: var(--font-size-adobe-body-s);
+  font-weight: var(--font-weight-adobe-regular);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-adobe-m);
+  color: var(--color-adobe-text);
+  text-align: center;
+}
+
+/* Pill-shaped button links grid (for "Discover even more features" section) */
+.columns p:has(a) {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.columns p a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 2px solid var(--color-adobe-text);
+  border-radius: 24px;
+  font-size: var(--font-size-adobe-body-s);
+  font-weight: var(--font-weight-adobe-regular);
+  color: var(--color-adobe-text);
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.columns p a:hover {
+  background-color: var(--color-adobe-text);
+  color: var(--color-adobe-white);
+  text-decoration: none;
+}
+
+@media (width <= 900px) {
+  .columns p:has(a) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width <= 600px) {
+  .columns p:has(a) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Numbered/Ordered Lists */
+.columns ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  margin: var(--spacing-adobe-m) 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columns ol li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: var(--spacing-adobe-m);
+  padding-bottom: var(--spacing-adobe-m);
+  border-bottom: 1px solid var(--color-adobe-gray-divider-200);
+}
+
+.columns ol li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.columns ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: var(--font-size-adobe-heading-m);
+  font-weight: var(--font-weight-adobe-bold);
+  color: var(--color-adobe-text);
+  width: 50px;
+  text-align: left;
+}
+
+.columns ol li p {
+  margin: 0;
+  text-align: left;
+  font-weight: var(--font-weight-adobe-regular);
+  display: block;
+}
+
+.columns ol li p strong {
+  display: block;
+  font-weight: var(--font-weight-adobe-bold);
+  margin-bottom: 4px;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;

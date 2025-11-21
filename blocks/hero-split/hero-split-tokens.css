@@ -1,0 +1,47 @@
+/* Hero Split Component Tokens */
+
+.hero-split {
+  /* Layout */
+  --hero-split-min-height: 568px;
+  --hero-split-padding-mobile: 40px 24px;
+  --hero-split-padding-desktop: 80px 120px;
+  --hero-split-max-width: 1200px;
+
+  /* Colors - Dark Background */
+  --hero-split-bg-color: #000000;
+  --hero-split-text-color: var(--color-adobe-white);
+  --hero-split-heading-color: var(--color-adobe-white);
+  --hero-split-image-bg-color: #c4c4c4;
+
+  /* Typography */
+  --hero-split-heading-size: var(--font-size-adobe-heading-xxl);
+  --hero-split-heading-weight: var(--font-weight-adobe-bold);
+  --hero-split-heading-line-height: 1.25;
+  --hero-split-body-size: var(--font-size-adobe-body-m);
+  --hero-split-body-weight: var(--font-weight-adobe-regular);
+  --hero-split-body-line-height: 1.5;
+
+  /* Logo/Brand */
+  --hero-split-logo-color-adobe: #fa0f00;
+  --hero-split-logo-color-brand: var(--color-adobe-white);
+
+  /* Button */
+  --hero-split-button-bg: var(--color-button-adobe-accent);
+  --hero-split-button-hover-bg: #3557e0;
+  --hero-split-button-color: var(--color-adobe-white);
+  --hero-split-button-padding: 12px 24px;
+  --hero-split-button-font-size: var(--font-size-button-m);
+  --hero-split-button-font-weight: var(--font-weight-adobe-bold);
+  --hero-split-button-radius: 20px;
+
+  /* Spacing */
+  --hero-split-content-gap: var(--spacing-adobe-m);
+  --hero-split-logo-margin: 0 0 var(--spacing-adobe-s) 0;
+  --hero-split-heading-margin: 0 0 var(--spacing-adobe-m) 0;
+  --hero-split-body-margin: 0 0 var(--spacing-adobe-m) 0;
+
+  /* Image */
+  --hero-split-image-position: absolute;
+  --hero-split-image-z-index: -1;
+  --hero-split-image-object-fit: cover;
+}

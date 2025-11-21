@@ -1,0 +1,124 @@
+/* Import component-specific tokens */
+@import './hero-split-tokens.css';
+
+.hero-split-container .hero-split-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-split {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--hero-split-min-height);
+  background-color: var(--hero-split-bg-color);
+  font-family: var(--font-adobe-clean);
+}
+
+/* First row - background image (hidden on mobile, shown as right column on desktop) */
+.hero-split > div:first-child {
+  display: none;
+}
+
+/* Second row - content */
+.hero-split > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  padding: var(--hero-split-padding-mobile);
+  background-color: var(--hero-split-bg-color);
+  color: var(--hero-split-text-color);
+}
+
+/* Brand logo styling */
+.hero-split h2 {
+  font-size: var(--font-size-adobe-heading-s);
+  font-weight: var(--font-weight-adobe-bold);
+  margin: var(--hero-split-logo-margin);
+  color: var(--hero-split-text-color);
+}
+
+/* Main heading */
+.hero-split h1 {
+  font-size: var(--hero-split-heading-size);
+  font-weight: var(--hero-split-heading-weight);
+  line-height: var(--hero-split-heading-line-height);
+  margin: var(--hero-split-heading-margin);
+  color: var(--hero-split-text-color);
+  max-width: 600px;
+}
+
+/* Body text */
+.hero-split p {
+  font-size: var(--hero-split-body-size);
+  font-weight: var(--hero-split-body-weight);
+  line-height: var(--hero-split-body-line-height);
+  margin: var(--hero-split-body-margin);
+  color: var(--hero-split-text-color);
+  max-width: 540px;
+}
+
+/* CTA Button */
+.hero-split a {
+  display: inline-block;
+  background-color: var(--hero-split-button-bg);
+  color: var(--hero-split-button-color);
+  padding: var(--hero-split-button-padding);
+  font-size: var(--hero-split-button-font-size);
+  font-weight: var(--hero-split-button-font-weight);
+  border-radius: var(--hero-split-button-radius);
+  text-decoration: none;
+  margin-top: var(--spacing-adobe-s);
+  width: fit-content;
+}
+
+.hero-split a:hover {
+  background-color: var(--hero-split-button-hover-bg);
+  text-decoration: none;
+}
+
+/* Desktop layout - Two columns side by side */
+@media (width >= 900px) {
+  .hero-split {
+    flex-direction: row;
+    min-height: var(--hero-split-min-height);
+  }
+
+  /* First div (image) - shown as right column using order */
+  .hero-split > div:first-child {
+    display: flex;
+    flex: 1;
+    order: 2;
+    background-color: var(--hero-split-image-bg-color);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-split > div:first-child picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-split > div:first-child img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Second div (content) - shown as left column using order */
+  .hero-split > div:nth-child(2) {
+    flex: 1;
+    order: 1;
+    padding: var(--hero-split-padding-desktop);
+    justify-content: center;
+  }
+
+  .hero-split h1 {
+    max-width: 500px;
+  }
+
+  .hero-split p {
+    max-width: 460px;
+  }
+}

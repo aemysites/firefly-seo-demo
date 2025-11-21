@@ -1,0 +1,53 @@
+/* Import component-specific tokens */
+@import './columns-aside-tokens.css';
+
+.columns-aside > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-aside img {
+  width: 100%;
+}
+
+.columns-aside > div > div {
+  order: 1;
+}
+
+.columns-aside > div > .columns-aside-img-col {
+  order: 0;
+}
+
+.columns-aside > div > .columns-aside-img-col img {
+  display: block;
+}
+
+/* Typography - Heading should be bold, body should be regular */
+.columns-aside h2 {
+  font-size: var(--columns-aside-heading-size);
+  font-weight: var(--columns-aside-heading-weight);
+  line-height: 1.25;
+  margin-bottom: var(--spacing-adobe-xs);
+  color: var(--columns-aside-heading-color);
+}
+
+.columns-aside p {
+  font-size: var(--columns-aside-body-size);
+  font-weight: var(--columns-aside-body-weight);
+  line-height: 1.5;
+  margin: 0;
+  color: var(--columns-aside-text-color);
+}
+
+@media (width >= 900px) {
+  .columns-aside > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-aside > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
